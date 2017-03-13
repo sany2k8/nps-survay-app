@@ -1,0 +1,260 @@
+
+.table-class {
+    border-left: 1px solid #BEBEBE;
+    margin-bottom: 0;
+    width: 100%;
+}
+.table-class thead .filters {
+    background: none repeat scroll 0 0 transparent;
+    height: 22px;
+    background-color: #FAFAFA;
+}
+.table-class  thead tr{
+    background: -moz-linear-gradient(center top , #F7F7F7, #E8E8E8) repeat-x scroll left top #E8E8E8;
+    height: 38px;
+}
+.table-class tbody tr:hover {
+    background-color: #C5D52B!important;
+}
+.table-class thead tr td {
+    border-bottom: 1px solid #BEBEBE;
+    border-right: 1px solid #BEBEBE;
+}
+.table-class thead tr td input {
+    width: 100%;
+}
+.table-class thead tr th {
+    background-color: transparent;
+    border-right: 1px solid #BEBEBE;
+    border-top: 1px solid #BEBEBE;
+    height: 22px;
+    padding: 4px;
+}
+.table-class thead tr th a {
+    color: #333333;
+    text-decoration: none;
+}
+.table-class tbody td {
+    border-bottom: 1px solid #BEBEBE;
+    border-right: 1px solid #BEBEBE;
+    padding: 4px;
+    width: 100px;
+}
+.table-class tbody tr {
+    height: 32px;
+}
+.table-class tbody tr.odd{
+    background-color: #F2F2F2;
+}
+.table-class tbody tr.even{
+    background-color: #FAFAFA;
+}
+.table-class tbody tr .button-column {
+    clear: both;
+    padding-left: 12px;
+    padding-right: 0;
+    width: 10%;
+}
+.table-class tbody td .view {
+    float: left;
+}
+.table-class tbody td .update{
+    float: left;
+}
+.table-class tbody td .delete{
+    float: left;
+}
+.summary {
+    background-color: #333333;
+    border-radius: 5px 5px 0 0;
+    color: #C5D52B;
+    font-size: 12px;
+    height: 38px;
+    line-height: 44px;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.pager {
+    background-color: #333333;
+    color: #FFFFFF;
+    height: 38px;
+    line-height: 38px;
+    padding-right: 2%;
+    text-align: right;
+}
+.table-class .asc {
+    background: url("../images/up.gif") no-repeat scroll right center transparent;
+    padding-right: 10px;
+}
+.table-class .desc {
+    background: url("../images/down.gif") no-repeat scroll right center transparent;
+    padding-right: 10px;
+}
+
+.table-class tfoot tr {
+    background-color: #D1D1D1;
+    color: #333333;
+    font-family: helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+}
+.grid-loading
+{
+    display: block;
+    height: 10px;
+    margin-top: 10px;
+}
+.grid-loading img{
+    display: none;
+}
+.table-class thead tr td select{
+	width:100%;
+}
+.table-class thead tr td input{
+	width:100%;
+}
+
+#page {
+	width: 100%;
+}
+
+.form .row label {
+    display: none;
+}
+#most_recent_transactions tr a{
+	color:#5d9ed2;
+	text-decoration:underline;
+}
+#most_recent_transactions tr a:hover{
+	color:#8b961e;
+	text-decoration:none;
+	cursor: pointer;
+}
+#most_recent_transactions tr:hover{
+	background-color:#c5d52b;
+}
+
+
+
+.table-class a{
+	color:#5d9ed2;
+	text-decoration:underline;
+}
+.table-class tr a:hover{
+	color:#8b961e;
+	text-decoration:underline;
+	cursor: pointer;
+}
+
+
+.form .row .timeframe{
+	padding: 4px 0;
+}
+.mws-panel .mws-panel-header {
+	font-size: 13px;
+}
+#most_recent_transactions tr td {
+    font-size: 12px;
+    padding: 9px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*css for control grid with responsive*/
+
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+	
+	#page {
+		width: 110%;
+	}
+	#most_recent_transactions tr td {
+		font-size: 10px;
+		padding: 9px 3px;
+	}
+		
+
+	
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1152px) {
+	.form .row .timeframe{
+		padding: 4px 0;
+	}
+	.mws-panel .mws-panel-header {
+		font-size: 13px;
+	}
+	#most_recent_transactions tr td {
+		font-size: 10px;
+		padding: 9px 7px;
+	}
+	
+}
+@media only screen and (min-width:1153px ) and (max-width: 1280px) {
+	#most_recent_transactions tr td {
+    font-size: 10px;
+    padding: 9px 7px;
+}
+	
+}
+@media only screen and (min-width: 1281px) and (max-width: 1400px) {
+	
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1440px) {
+	
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1600px) {
+	
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1680px) {
+	
+}
+
+/*css for control grid with responsive*/
+
+.table-class a
+{
+    color: #333333;
+    text-decoration: underline !important;
+}
+
+.table-class a:hover
+{
+    text-decoration: none !important;
+}
+
+.grid-view-loading
+{
+    background: transparent !important;
+}

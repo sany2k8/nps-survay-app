@@ -1,0 +1,52 @@
+/*
+ * MWS Admin v2.1 - Main Stylesheet
+ * This file is part of MWS Admin, an Admin template build for sale at ThemeForest.
+ * All copyright to this file is hold by Mairel Theafila <maimairel@yahoo.com> a.k.a nagaemas on ThemeForest.
+ * Last Updated:
+ * December 08, 2012
+ *
+ */
+
+@import url("shared.css");
+@import url("core.css");
+@import url("panels.css");
+@import url("table.css");
+@import url("gallery.css");
+@import url("button.css");
+@import url("statistic.css");
+@import url("form.css");
+@import url("error.css");
+@import url("tweaks.css");
+@import url("plugins.css");
+@import url("lt-ie9.css");
+
+/*Inline Edit*/
+.ie-inline span span
+{
+    display: inline-block;
+    height: 5%;
+    line-height: 16px;
+    width: 10%;
+}
+
+.ie-inline .ie-inline-value span
+{
+    background: url("../images/inline_edit.png") no-repeat;
+}
+
+.ie-inline .ie-inline-field span
+{
+    background: url("../images/inline_save.png") no-repeat;
+}
+
+.green{
+    color: #008000;
+}
+
+.red{
+    color: #ff0000;
+}
+.detail-view a
+{
+    color:  #008000;
+}

@@ -1,0 +1,66 @@
+ ALTER TABLE tbl_user_group
+              OWNER TO rdsoz;
+
+ALTER TABLE tbl_group_permission
+                OWNER TO rdsoz;
+
+ALTER TABLE affiliate
+                  OWNER TO rdsoz;
+
+ALTER TABLE tbl_user
+              OWNER TO rdsoz;
+
+ALTER TABLE feed
+              OWNER TO rdsoz;
+
+ALTER TABLE traffic_source
+                  OWNER TO rdsoz;
+
+ALTER TABLE custom_fields
+              OWNER TO rdsoz;
+
+ALTER TABLE campaign
+              OWNER TO rdsoz;
+
+ ALTER TABLE client
+              OWNER TO rdsoz;
+
+ ALTER TABLE segment
+              OWNER TO rdsoz;
+
+ ALTER TABLE custom_fields_value
+                  OWNER TO rdsoz;
+
+ALTER TABLE lean_canvas
+                  OWNER TO rdsoz;
+
+ ALTER TABLE assumption_task
+                  OWNER TO rdsoz;
+
+ALTER TABLE field_labels
+              OWNER TO rdsoz;
+
+ ALTER TABLE ads_spent
+              OWNER TO rdsoz;
+
+ALTER TABLE analytics_visitors
+              OWNER TO rdsoz;
+
+ALTER TABLE transaction
+              OWNER TO rdsoz;
+
+ALTER TABLE site_specific_permission
+              OWNER TO rdsoz;
+
+ALTER TABLE fk_requests
+              OWNER TO rdsoz;
+
+ ALTER TABLE flipkey_data
+                  OWNER TO rdsoz;
+
+ ALTER TABLE flipkey_data_import
+                  OWNER TO rdsoz;
+
+ALTER TABLE tbl_access
+              OWNER TO rdsoz;
+

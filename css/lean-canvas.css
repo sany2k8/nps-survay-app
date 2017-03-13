@@ -1,0 +1,115 @@
+.print-tast-holder {
+    float: right;
+    width: 12%;
+}
+/*.new-task{
+    float: left;
+}
+.new-task a {
+    background: url("../images/icon-1.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 32px;
+    padding-right: 10px;
+    width: 32px;
+}*/
+.print{
+    float: right;
+}
+.print a {
+    background: url("../images/icon-2.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 32px;
+    width: 32px;
+}
+
+
+/*Form*/
+.assumption-col {
+    float: left;
+}
+.assumption-col:last-child{
+    margin-right: none;
+}
+.col-1{
+    width:20%;
+}
+.assumption-all h3 {
+    padding-left: 2%;
+    text-transform: uppercase;
+}
+.col-2{
+    width:50%;
+}
+.assumption-block-bottom-a {
+    color: #3C7621 !important;
+    display: block;
+    float: left;
+    font-size: 11px;
+    padding-top: 5px;
+    width: 75%;
+}
+.note-img a{
+    /*background-image: url("../images/icon-3.png");
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;*/
+}
+.assumption-block-bottom .note-img {
+    float: right;
+}
+.assumption-block{
+    border: 1px solid #999999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 99%;
+    margin: 0 auto;
+}
+.assumption-block1 {
+    border: 1px solid #999999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 98%;
+    margin: 0 auto;
+}
+.assumption-block2 {
+    border: 1px solid #999999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 98%;
+    margin: 0 auto;
+}
+.assumption-blue-block {
+    border: 1px solid #999999;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 98%;
+}
+.assumption-col li {
+    padding-bottom: 20px;
+}
+.assumption-blue-block li {
+    padding-bottom: 5px;
+}
+.assumption-blue-block li a{
+    color:#5795d8;
+}
+.assumption-block-bottom {
+    padding-left: 1%;
+    width: 99%;
+}
+.assumption-bottom {
+    padding-top: 5px;
+}
+.assumption-block .assumption-list {
+    height: 178px;
+}
+.assumption-block1 .assumption-list {
+    height: 475px;
+}
+.assumption-block2 .assumption-list {
+    height: 272px;
+}
+.assumption-blue-block .assumption-list {
+    height: 109px;
+}
