@@ -19,7 +19,6 @@ $this->menu=array(
 <h1>View Survay #<?php echo $model->id; ?></h1>
 
 <div class="mws-panel grid_7">
-	<h2><?php echo $model->id; ?> - <?php echo $model->name; ?></h2>
 	<div class="mws-panel-header"><span>View Survay</span></div>
 	<div class="mws-panel-body" style="height: auto">
 		<div class="left" style="width:50%;float:left;padding:0;margin:0">

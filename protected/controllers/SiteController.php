@@ -125,7 +125,7 @@ class SiteController extends Controller
         Yii::app()->session->destroy();
 		Yii::app()->user->logout();
         Yii::app()->request->cookies->clear();
-		$this->redirect(Yii::app()->homeUrl);
+		$this->redirect('/site/login');
 	}
 
 }

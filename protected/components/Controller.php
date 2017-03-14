@@ -56,6 +56,23 @@ class Controller extends CController
         }
     }
 
+    public function getAccess($menu=false,$controller='',$action='')
+    {
+
+        if(!Yii::app()->user->isGuest)
+        {
+            return [Yii::app()->session['username']];
+        }
+        elseif($menu)
+        {
+            return false;
+        }
+
+        return array(false);
+
+    }
+
+
 	public function getTab($v)
     {
         if(!is_array($v)){
@@ -96,12 +113,6 @@ class Controller extends CController
         return Yii::app()->user->getId();
     }
 
-    /**
-     * @return bool
-     */
-    public function IsSuperAdmin(){
 
-        return ($this->getUserId() == 4 )? true:false; //here 4=John
-    }
 
 }

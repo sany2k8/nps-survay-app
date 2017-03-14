@@ -57,16 +57,6 @@
         <!-- User Tools (notifications, logout, profile, change password) -->
         <div id="mws-user-tools" class="clearfix">
 
-            <span>
-                &nbsp;&nbsp;
-                <?=CHtml::link(CHtml::image(Yii::app()->request->baseUrl.
-                "/images/icon-1.png")." Build A New Business", $this->createUrl("/affiliates/setup/")
-
-                )?>
-            </span>
-
-
-
             <!-- User Information and functions section -->
             <div id="mws-user-info" class="mws-inset">
 

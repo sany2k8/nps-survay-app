@@ -69,7 +69,7 @@
                     <div class="mws-form-item">
                         <?php echo $form->dropDownList($model,'call_status',Enum::getCallStatus(),array("class"=>"small")) ?>
                     </div>
-                    <?php echo $form->error($model,'call_date'); ?>
+                    <?php echo $form->error($model,'call_status'); ?>
                 </div>
 
                 <div class="mws-form-row">

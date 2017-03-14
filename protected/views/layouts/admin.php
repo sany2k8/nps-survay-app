@@ -67,13 +67,26 @@
                     <a href="javascript: void(0)" class="cursorPointer">
                         <table>
                             <tr>
-                                <td><i class="icol32-qip-at-home-2"></i></td><td title="Create, Remove & Manage Survay's">Survay</td>
+                                <td><i class="icol32-add"></i></td><td title="Create, Remove & Manage Survay's">Survay</td>
                             </tr>
                         </table>
                     </a>
                     <ul <?=$this->getTab(array("user"))?> >
                         <li><?php echo CHtml::link('View All Survays ',$this->createUrl('/survay/admin'), array('title'=>'View all survays and manage them, either you can change survay details or delete them too')); ?></li>
                         <li><?php echo CHtml::link('Add Survay',$this->createUrl('/survay/create'),array('title'=>'Create a new user.')); ?></li>
+                    </ul>
+                </li>
+
+                <li class="active">
+                    <a href="javascript: void(0)" class="cursorPointer">
+                        <table>
+                            <tr>
+                                <td><i class="icon-settings"></i></td><td title="Mange system settings">Settings</td>
+                            </tr>
+                        </table>
+                    </a>
+                    <ul <?=$this->getTab(array("site"))?> >
+                        <li><?php echo CHtml::link('Logout ',$this->createUrl('/site/logout/'), array('title'=>'Logging out from system')); ?></li>
                     </ul>
                 </li>
 
@@ -118,19 +131,12 @@
 
 
         $(document).ready(function(){
-            //menu fixed by Sabbir
+
             $("#mws-navigation ul li a").click(function(){
                 var this_one_parent = $(this).parent();if(this_one_parent.find("ul li a").html()==null){return true;}
                 $.each($("#mws-navigation ul li"),function(){if($(this).attr("class")=="active" && this_one_parent.index()!=$(this).index()){$(this).find("ul").slideUp();}});
                 if(this_one_parent.find("ul").css("display")=="block"){this_one_parent.find("ul").slideUp();}else{this_one_parent.find("ul").slideDown();}
             });
-            //menu
-
-           //hide site dropdown div
-            if (window.location.href.indexOf("staysIOChartData") > -1){
-                $("#global_site_id").hide();
-            }
-
         });
     </script>
 <?php $this->endContent(); ?>

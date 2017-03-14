@@ -57,6 +57,9 @@ class UserIdentity extends CUserIdentity
         if(isset($model->username) and $model->username==$this->username)
         {
             $this->errorCode = self::ERROR_NONE;
+            $this->_id = $model->id;
+            Yii::app()->session['username'] = $model->username;
+            Yii::app()->session['user_id'] = $model->id;
         }
         else
         {

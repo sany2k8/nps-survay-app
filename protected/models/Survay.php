@@ -53,7 +53,7 @@ class Survay extends CActiveRecord
 		return array(
 			array('msisdn, user_id, product, score', 'required'),
 			array('score', 'numerical', 'integerOnly'=>true),
-			array('date, call_date, create_date, update_date', 'length', 'max'=>6),
+			array('date, call_date, create_date, update_date', 'length', 'max'=>16),
 			array('msisdn, product, purpose_served, heard_abt_tonic, knowledge, behavior, waiting_time', 'length', 'max'=>25),
 			array('user_id, easy_to_avail, hos_par_auth_behav, com_from_tonic_auth, refer_to_ff', 'length', 'max'=>15),
 			array('assigned_to', 'length', 'max'=>35),
@@ -176,5 +176,19 @@ class Survay extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function afterValidate()
+	{
+		if($this->isNewRecord)
+		{
+			$this->create_date = date("Y-m-d H:i:s");
+		}
+		else
+		{
+			$this->update_date = date("Y-m-d H:i:s");
+		}
+
+		return parent::afterValidate();
 	}
 }
