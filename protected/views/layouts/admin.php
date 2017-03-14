@@ -16,7 +16,6 @@
 	$cs->registerCssFile($baseUrl.'/css/Mgrid.css');
 ?>
 <?php
-#Set Labels#Previosly sets from Base Controller Class with overwrite method is now removed
 
 ?>
 <?php $this->beginContent('//layouts/default'); ?>
@@ -49,22 +48,35 @@
         <div id="mws-navigation">
             <ul>
 
+                <li class="active">
+                    <a href="javascript: void(0)" class="cursorPointer">
+                        <table>
+                            <tr>
+                                <td><i class="icol32-qip-at-home-2"></i></td><td title="Create, Remove & Manage User's">User Panel</td>
+                            </tr>
+                        </table>
+                    </a>
+                    <ul <?=$this->getTab(array("user"))?> >
+                        <li><?php echo CHtml::link('View All Users ',$this->createUrl('/user/admin'), array('title'=>'View all user and manage them, either you can change user details or delete them too')); ?></li>
+                        <li><?php echo CHtml::link('New User',$this->createUrl('/user/create'),array('title'=>'Create a new user.')); ?></li>
+                    </ul>
+                </li>
 
 
                 <li class="active">
                     <a href="javascript: void(0)" class="cursorPointer">
                         <table>
                             <tr>
-                                <td><i class="icol32-qip-at-home-2"></i></td><td title="For permission just follow those links step by step">Admin Panel</td>
+                                <td><i class="icol32-qip-at-home-2"></i></td><td title="Create, Remove & Manage Survay's">Survay</td>
                             </tr>
                         </table>
                     </a>
-                    <ul <?=$this->getTab(array("usergroup","user","access","grouppermission","affiliates"))?> >
-                        <li><?php echo CHtml::link('View All Users ',$this->createUrl('/user/admin'), array('title'=>'View all user and manage them, either you can change user details or delete user too')); ?></li>
-                        <li><?php echo CHtml::link('New User',$this->createUrl('/user/create'),array('title'=>'Create a new user.')); ?></li>
+                    <ul <?=$this->getTab(array("user"))?> >
+                        <li><?php echo CHtml::link('View All Survays ',$this->createUrl('/survay/admin'), array('title'=>'View all survays and manage them, either you can change survay details or delete them too')); ?></li>
+                        <li><?php echo CHtml::link('Add Survay',$this->createUrl('/survay/create'),array('title'=>'Create a new user.')); ?></li>
                     </ul>
                 </li>
-            
+
 
             </ul>
         </div>
@@ -122,4 +134,5 @@
         });
     </script>
 <?php $this->endContent(); ?>
+
 
