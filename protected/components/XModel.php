@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by Sany.
- * User: Computer Source
- * Date: 1/31/14
- * Time: 11:41 AM
- */
 
 class XModel  extends CActiveRecord {
 

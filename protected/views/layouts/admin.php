@@ -6,13 +6,11 @@
 	//Core Script 
 	$cs->registerScriptFile($baseUrl.'/bootstrap/js/bootstrap.min.js',CClientScript::POS_HEAD);
 	$cs->registerScriptFile($baseUrl.'/js/core/mws.js',CClientScript::POS_HEAD);
-    //$cs->registerScriptFile($baseUrl.'/js/themer.js',CClientScript::POS_HEAD);
 
     // Plugin Scripts
     $cs->registerScriptFile($baseUrl.'/custom-plugins/fileinput.js',CClientScript::POS_HEAD);
-    //$cs->registerScriptFile($baseUrl.'/plugins/datatables/jquery.dataTables.min.js',CClientScript::POS_HEAD);
 
-//	$cs->registerCssFile($baseUrl.'/css/themer.css');
+
 	$cs->registerCssFile($baseUrl.'/css/Mgrid.css');
 ?>
 <?php
@@ -35,14 +33,6 @@
         <div class="mws-inset11">
             &nbsp;
         </div>
-
-        <!-- Searchbox -->
-       <!-- <div id="mws-searchbox" class="mws-inset">
-            <form action="typography.html">
-                <input type="text" class="mws-search-input" placeholder="Search...">
-                <button type="submit" class="mws-search-submit"><i class="icon-search"></i></button>
-            </form>
-        </div>-->
 
         <!-- Main Navigation -->
         <div id="mws-navigation">
@@ -128,7 +118,6 @@
                }
            }
        );
-
 
         $(document).ready(function(){
 

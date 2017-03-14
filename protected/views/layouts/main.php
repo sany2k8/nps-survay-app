@@ -15,7 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
-<!--    --><?php //Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -38,14 +37,6 @@
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
                 array('label' => 'Access Rules', 'url' => '#',
                     'items' => array(
-                    //array('label' => 'menu item', 'url' => '#'),
-                    /*array('label' => 'menu item', 'url' => '#', 'items' => array(
-                        array('label' => 'menu item', 'url' => '#')
-                    )),*/
-                    /*array('label'=>'Users', 'url'=>array('/user/index'), 'visible'=>Yii::app()->controller->getAccess(true,'user','index')),
-                    array('label'=>'User Group', 'url'=>array('/userGroup/index'), 'visible'=>Yii::app()->controller->getAccess(true,'userGroup','index')),
-                    array('label'=>'Group Permission', 'url'=>array('/groupPermission/index'), 'visible'=>Yii::app()->controller->getAccess(true,'groupPermission','index')),
-                    array('label'=>'User Access', 'url'=>array('/access/index'), 'visible'=>Yii::app()->controller->getAccess(true,'access','index')),*/
                     ),
                     'visible'=>!Yii::app()->user->isGuest
                 ),

@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by Sabbir.
- * To change this template use File | Settings | File Templates.
- */
-
 
 Yii::import('zii.widgets.grid.CGridView');
 class MGridView extends CGridView{

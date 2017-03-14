@@ -121,9 +121,6 @@ class User extends XModel
         }
         $this->update_date = date("Y-m-d H:i:s");
 
-        #$this->password = sha1($this->password);
-
-
         return parent::afterValidate();
     }
 
@@ -146,9 +143,9 @@ class User extends XModel
             return 'N/A';
         }
     }
-    #30-01-14
+
     public function getUserNames($user_id,$active=1){
         return CHtml::listData($this->findAll("active=:active AND id!=:id",array(':active'=>$active,':id'=>$user_id)),'id','username');
     }
-    #30-01-14
+
 }

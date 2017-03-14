@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by Sabbir.
- * Email: sabbir1cse@gmail.com
- * Date: 4/21/13
- * Time: 8:10 PM
- * To change this template use File | Settings | File Templates.
- */
 
 class GenericProperties
 {
@@ -14,7 +7,6 @@ class GenericProperties
      * @param $data
      * @param bool $die
      */
-
 
     public static function _setTrace($data=null,$die=true){
         if(is_array($data) or is_object($data)){

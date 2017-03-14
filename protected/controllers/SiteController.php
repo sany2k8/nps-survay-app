@@ -24,10 +24,6 @@ class SiteController extends Controller
 	}
 
     /**
-     * @return array action filters
-     */
-
-    /**
      * Specifies the access control rules.
      * This method is used by the 'accessControl' filter.
      * @return array access control rules
@@ -47,21 +43,6 @@ class SiteController extends Controller
 		);
 	}
 
-
-
-    /**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
-	 */
-	/*public function actionIndex()
-	{
-
-        $this->layout='//layouts/admin';
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-
-		$this->render('index');
-	}*/
 
 	/**
 	 * This is the action to handle external exceptions.
