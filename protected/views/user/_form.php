@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 
 ?>
-<div class="mws-panel grid_6">
+<div class="mws-panel grid_12">
     <?php if(isset($model->id)){?>
         <h1>Update <?php echo 'User' ?> <?php echo $model->id; ?></h1>
     <?php }else{?>
@@ -62,32 +62,6 @@
                 </div>
 
                 <div class="mws-form-row">
-                    <?php echo $form->labelEx($model,'create_date',array("class"=>'mws-form-label')); ?>
-                    <div class="mws-form-item">
-                        <?php echo $form->textField($model,'create_date',array('readonly'=>true,"class"=>"medium")); ?>
-                    </div>
-                    <?php echo $form->error($model,'create_date'); ?>
-                </div>
-
-                <div class="mws-form-row">
-                    <?php echo $form->labelEx($model,'update_date',array("class"=>'mws-form-label')); ?>
-                    <div class="mws-form-item">
-                        <?php echo $form->textField($model,'update_date',array("class"=>"medium",'readonly'=>true)); ?>
-                    </div>
-                    <?php echo $form->error($model,'update_date'); ?>
-                </div>
-
-                <div class="mws-form-row">
-                    <?php
-                    echo $form->labelEx($model, 'avatar',array("class"=>'mws-form-label'));
-                    echo '<div class="mws-form-item">';
-                        echo $form->fileField($model, 'avatar',array('class'=>'fileField_avatar'));
-                    echo '</div>';
-                    echo $form->error($model, 'avatar');
-                    ?>
-                </div>
-
-                <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'active',array("class"=>'mws-form-label')); ?>
                     <div class="mws-form-item">
                         <?php echo $form->dropDownList($model,'active',Enum::yesNo(),array("class"=>"medium")); ?>
@@ -112,3 +86,9 @@
 		$(".fileinput-btn.btn").css('right','235px');
 	});
 </script>
+
+<style>
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+        width: 67% !important;
+    }
+</style>
