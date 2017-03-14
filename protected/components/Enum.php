@@ -37,8 +37,10 @@ class Enum
     {
         $data = array(array('key'=>'1','value'=>'Yes'),array('key'=>'0','value'=>'No'));
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
         return self::make_data_list($data);
     }
@@ -56,8 +58,10 @@ class Enum
            );
 
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
         return self::make_data_list($data);
     }
@@ -74,8 +78,10 @@ class Enum
         $data[] = array('key'=>'2','value'=>'Detractor');
 
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
 
 
@@ -95,8 +101,10 @@ class Enum
         $data[] = array('key'=>'2','value'=>'Others');
 
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
         return self::make_data_list($data);
     }
@@ -113,8 +121,10 @@ class Enum
         $data[] = array('key'=>'1','value'=>'Discount');
         $data[] = array('key'=>'2','value'=>'Tonic Doctor');
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
 
         return self::make_data_list($data);
@@ -133,8 +143,10 @@ class Enum
         $data[] = array('key'=>'2','value'=>'Average');
 
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
         return self::make_data_list($data);
     }
@@ -152,8 +164,10 @@ class Enum
         $data[] = array('key'=>'3','value'=>'Overall');
 
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
         return self::make_data_list($data);
     }
@@ -178,8 +192,10 @@ class Enum
         $data[] = array('key'=>'0','value'=>'Successfull');
         $data[] = array('key'=>'1','value'=>'UnSuccessfull');
         if($key!=''){
-            $value = self::getDataByKey($key,$data);
-            return $value;
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
         }
         return self::make_data_list($data);
     }
@@ -192,6 +208,7 @@ class Enum
     public static function getDataByKey($key,$data){
         $key = trim($key);
         $value = array_column($data,'value','key');
+
         return $value[$key];
     }
 

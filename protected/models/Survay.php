@@ -51,9 +51,9 @@ class Survay extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('msisdn, user_id, product, score', 'required'),
+			array('msisdn, user_id, product, score,call_date', 'required'),
 			array('score', 'numerical', 'integerOnly'=>true),
-			array('date, call_date, create_date, update_date', 'length', 'max'=>16),
+			array('date, call_date, create_date, update_date', 'length', 'max'=>26),
 			array('msisdn, product, purpose_served, heard_abt_tonic, knowledge, behavior, waiting_time', 'length', 'max'=>25),
 			array('user_id, easy_to_avail, hos_par_auth_behav, com_from_tonic_auth, refer_to_ff', 'length', 'max'=>15),
 			array('assigned_to', 'length', 'max'=>35),
@@ -182,11 +182,13 @@ class Survay extends CActiveRecord
 	{
 		if($this->isNewRecord)
 		{
-			$this->create_date = date("Y-m-d H:i:s");
+			$this->date = $this->create_date = date("Y-m-d H:i:s");
+			$this->time = date("H:i:s");
 		}
 		else
 		{
 			$this->update_date = date("Y-m-d H:i:s");
+			$this->time = date("H:i:s");
 		}
 
 		return parent::afterValidate();

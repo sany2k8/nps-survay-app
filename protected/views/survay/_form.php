@@ -22,6 +22,15 @@
 
             <fieldset>
                 <legend>All</legend>
+
+                <div class="mws-form-row" style="display: none">
+                    <?php echo $form->labelEx($model,'time',array("class"=>"mws-form-label")); ?>
+                    <div class="mws-form-item">
+                        <?php echo $form->textField($model,'time',array("class"=>"medium-large required")); ?>
+                    </div>
+                    <?php echo $form->error($model,'time'); ?>
+                </div>
+
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'msisdn',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
@@ -75,7 +84,7 @@
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'purpose_served',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->dropDownList($model,'purpose_served',Enum::getHeardType(),array("class"=>"small")) ?>
+                        <?php echo $form->dropDownList($model,'purpose_served',Enum::yesNoNotSure(),array("class"=>"small")) ?>
                     </div>
                     <?php echo $form->error($model,'purpose_served'); ?>
                 </div>

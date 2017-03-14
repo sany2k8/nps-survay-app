@@ -1,27 +1,3 @@
-select setval('tbl_user_group_id_seq', (select max(id)+1 from tbl_user_group), false);
-select setval('tbl_group_permission_id_seq', (select max(id)+1 from tbl_group_permission), false);
-select setval('affiliate_id_seq', (select max(id)+1 from affiliate), false);
 select setval('tbl_user_id_seq', (select max(id)+1 from tbl_user), false);
-select setval('feed_id_seq', (select max(id)+1 from feed), false);
-select setval('traffic_source_id_seq', (select max(id)+1 from traffic_source), false);
-select setval('custom_fields_id_seq', (select max(id)+1 from custom_fields), false);
-select setval('campaign_id_seq', (select max(id)+1 from campaign), false);
-select setval('client_id_seq', (select max(id)+1 from client), false);
-select setval('segment_id_seq', (select max(id)+1 from segment), false);
-select setval('custom_fields_value_id_seq', (select max(id)+1 from custom_fields_value), false);
-select setval('lean_canvas_id_seq', (select max(id)+1 from lean_canvas), false);
-select setval('assumption_task_id_seq', (select max(id)+1 from assumption_task), false);
-select setval('field_labels_id_seq', (select max(id)+1 from field_labels), false);
-select setval('ads_spent_id_seq', (select max(id)+1 from ads_spent), false);
-select setval('analytics_visitors_id_seq', (select max(id)+1 from analytics_visitors), false);
-select setval('transaction_id_seq', (select max(id)+1 from transaction), false);
-select setval('site_specific_permission_id_seq', (select max(id)+1 from site_specific_permission), false);
-select setval('fk_requests_id_seq', (select max(id)+1 from fk_requests), false);
-select setval('flipkey_data_id_seq', (select max(id)+1 from flipkey_data), false);
-select setval('flipkey_data_import_id_seq', (select max(id)+1 from flipkey_data_import), false);
-select setval('tbl_access_id_seq', (select max(id)+1 from tbl_access), false);
+select setval('survay_id_seq', (select max(id)+1 from survay), false);
 
-#sequence create
-create sequence client_9_id_seq;
-ALTER TABLE public.client_9
-   ALTER COLUMN id SET DEFAULT nextval('client_9_id_seq'::regclass);

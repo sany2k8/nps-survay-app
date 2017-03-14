@@ -14,7 +14,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'NPS - The Platform',
 
-    'defaultController' => 'site',
+    'defaultController' => 'survay',
     #timezone
     #'timeZone'=>"Asia/Dhaka",
     'timeZone'=>"America/Vancouver",

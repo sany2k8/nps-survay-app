@@ -33,13 +33,27 @@ class SiteController extends Controller
      * @return array access control rules
      */
 
+	public function accessRules()
+	{
+		return array(
+
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions' => array($this->action->id),
+				'users' => $this->getAccess(),
+			),
+			array('deny',  // deny all users
+				'users' => array('*'),
+			),
+		);
+	}
+
 
 
     /**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionIndex()
+	/*public function actionIndex()
 	{
 
         $this->layout='//layouts/admin';
@@ -47,7 +61,7 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 
 		$this->render('index');
-	}
+	}*/
 
 	/**
 	 * This is the action to handle external exceptions.

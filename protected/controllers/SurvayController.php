@@ -7,6 +7,7 @@ class SurvayController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/admin';
+	public $defaultAction='admin';
 
 	/**
 	 * @return array action filters
@@ -35,18 +36,7 @@ class SurvayController extends Controller
 			array('deny',  // deny all users
 				'users' => array('*'),
 			),
-
-			/*array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),*/
 		);
-
-
 	}
 
 	/**
@@ -76,6 +66,8 @@ class SurvayController extends Controller
 			$model->attributes=$_POST['Survay'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
+			/*else
+				GenericProperties::_setTrace($model->errors);*/
 		}
 
 		$this->render('create',array(
@@ -100,6 +92,9 @@ class SurvayController extends Controller
 			$model->attributes=$_POST['Survay'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
+			/*else
+				GenericProperties::_setTrace($model->errors);*/
+
 		}
 
 		$this->render('update',array(
