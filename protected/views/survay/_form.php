@@ -107,7 +107,7 @@
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'knowledge',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->dropDownList($model,'heard_abt_tonic',Enum::getEnumeration(),array("class"=>"small")) ?>
+                        <?php echo $form->dropDownList($model,'knowledge',Enum::getEnumeration(),array("class"=>"small")) ?>
                     </div>
                     <?php echo $form->error($model,'knowledge'); ?>
                 </div>

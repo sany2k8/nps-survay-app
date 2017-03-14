@@ -84,4 +84,30 @@ class GenericProperties
             }
          ");
     }
+
+    /**
+     * @param $model
+     * @param $attribute
+     * @return array
+     */
+    public static function getDatePickerForGrid($model,$attribute){
+
+        $controller = new CController('HelpController');
+        $datePicker=array(
+            'name' => $attribute,
+            'type' => 'raw',
+            'filter'=>$controller->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model'=>$model,
+                'attribute'=>$attribute,
+                'htmlOptions' => array(
+                    'id' => 'datepicker_for_'.$attribute
+                ),
+                'options' => array(
+                    'dateFormat' => 'yy-mm-dd'
+                )
+            ), true)
+        );
+
+        return $datePicker;
+    }
 }

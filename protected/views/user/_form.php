@@ -61,6 +61,17 @@
                     <?php echo $form->error($model,'email'); ?>
                 </div>
 
+
+                <div class="mws-form-row">
+                    <?php
+                    echo $form->labelEx($model, 'avatar',array("class"=>'mws-form-label'));
+                    echo '<div class="mws-form-item">';
+                    echo $form->fileField($model, 'avatar',array('class'=>'fileField_avatar'));
+                    echo '</div>';
+                    echo $form->error($model, 'avatar');
+                    ?>
+                </div>
+
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'active',array("class"=>'mws-form-label')); ?>
                     <div class="mws-form-item">

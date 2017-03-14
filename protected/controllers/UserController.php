@@ -69,9 +69,6 @@ class UserController extends Controller
                 $model->password = sha1($model->password);
             }
 
-
-
-
             $uploaded_file = CUploadedFile::getInstance($model,'avatar');
 
             $main_image=null;
@@ -94,16 +91,12 @@ class UserController extends Controller
             }
 
 
-
 			if($model->save()):
-                GenericProperties::setUserImage($main_image,$model->getPrimaryKey());
-                if(isset($_POST['CustomFieldValue'])){
-                    $data = $_POST['CustomFieldValue'];
-                    GenericProperties::setCustomFieldData($data, $model->id);
-                }
-
+				GenericProperties::setUserImage($main_image,$model->getPrimaryKey());
 				$this->redirect(array('view','id'=>$model->id));
-            endif;
+			endif;
+
+
 		}
 
         $model->password = null;
@@ -159,6 +152,11 @@ class UserController extends Controller
                     @unlink(Yii::app()->basePath."/../images/profile-images/".$old_image);#if new image uploaded then delete previous image
                 endif;
             }
+
+			if($model->save()):
+				$this->redirect(array('view','id'=>$model->id));
+			endif ;
+
 		}
         $model->password = null;
 		$this->render('update',array(

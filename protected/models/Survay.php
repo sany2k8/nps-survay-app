@@ -87,7 +87,7 @@ class Survay extends CActiveRecord
 			'id' => 'ID',
 			'date' => 'Date',
 			'time' => 'Time',
-			'msisdn' => 'Msisdn',
+			'msisdn' => 'MSISDN',
 			'user_id' => 'User',
 			'product' => 'Product',
 			'assigned_to' => 'Assigned To',
@@ -134,13 +134,15 @@ class Survay extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('date',$this->date,true);
+		//$criteria->compare('date',$this->date,true);
+		$criteria->compare('date::text',$this->date,true);
 		$criteria->compare('time',$this->time,true);
 		$criteria->compare('msisdn',$this->msisdn,true);
 		$criteria->compare('user_id',$this->user_id,true);
 		$criteria->compare('product',$this->product,true);
 		$criteria->compare('assigned_to',$this->assigned_to,true);
-		$criteria->compare('call_date',$this->call_date,true);
+		//$criteria->compare('call_date',$this->call_date,true);
+		$criteria->compare('call_date::text',$this->call_date,true);
 		$criteria->compare('call_status',$this->call_status,true);
 		$criteria->compare('purpose_served',$this->purpose_served,true);
 		$criteria->compare('heard_abt_tonic',$this->heard_abt_tonic,true);
