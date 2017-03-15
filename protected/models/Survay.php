@@ -204,4 +204,55 @@ class Survay extends CActiveRecord
 	{
 		return isset($model->product) ? Enum::getProductType($model->product) :'';
 	}
+
+	/**
+	 * @param $model
+	 * @return array|mixed|string
+	 */
+	public function getCallStatus($model)
+	{
+		return isset($model->call_status) ? Enum::getCallStatus($model->call_status) :'';
+	}
+
+
+	/**
+	 * @param $model
+	 * @return array|mixed|string
+	 */
+	public function yesNoNotSure($model)
+	{
+		return isset($model->purpose_served) ? Enum::yesNoNotSure($model->purpose_served) :'';
+	}
+
+
+	/**
+	 * @param $model
+	 * @return array|mixed|string
+	 */
+	public function getHeardType($model)
+	{
+		return isset($model->heard_abt_tonic) ? Enum::getHeardType($model->heard_abt_tonic) :'';
+	}
+
+
+	/**
+	 * @param $model
+	 * @return array|mixed|string
+	 */
+	public function getEnumeration($model)
+	{
+		return isset($model->knowledge) ? Enum::getEnumeration($model->knowledge) :'';
+	}
+
+
+	/**
+	 * @param $model
+	 * @return array|mixed|string
+	 */
+	public function getCall($model)
+	{
+		return isset($model->call_status) ? Enum::getCallStatus($model->call_status) :'';
+	}
+
+
 }

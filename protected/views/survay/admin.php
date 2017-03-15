@@ -1,44 +1,9 @@
 <?php
 /* @var $this SurvayController */
 /* @var $model Survay */
-
-$this->breadcrumbs=array(
-	'Survays'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Survay', 'url'=>array('index')),
-	array('label'=>'Create Survay', 'url'=>array('create')),
-);
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#survay-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h1>Manage Survays</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 <div class="grid-loading">
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/loading.gif" alt="Loading...">
@@ -64,10 +29,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'assigned_to',
 		//'call_date',
 		GenericProperties::getDatePickerForGrid($model,'call_date'),
-		'call_status',
-		'purpose_served',
-		'heard_abt_tonic',
-		'knowledge',
+		//'call_status',
+		array('name'=>'call_status','filter'=>Enum::getCallStatus(),'value'=>array($model,'getCallStatus')),
+		//'purpose_served',
+		array('name'=>'purpose_served','filter'=>Enum::yesNoNotSure(),'value'=>array($model,'yesNoNotSure')),
+		//'knowledge',
+		array('name'=>'knowledge','filter'=>Enum::getEnumeration(),'value'=>array($model,'getEnumeration')),
+		//'heard_abt_tonic',
+		array('name'=>'heard_abt_tonic','filter'=>Enum::getHeardType(),'value'=>array($model,'getHeardType')),
 		'score',
 		/*
 		'behavior',
