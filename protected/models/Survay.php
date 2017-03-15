@@ -195,4 +195,13 @@ class Survay extends CActiveRecord
 
 		return parent::afterValidate();
 	}
+
+	/**
+	 * @param $model
+	 * @return array|mixed|string
+	 */
+	public function getProduct($model)
+	{
+		return isset($model->product) ? Enum::getProductType($model->product) :'';
+	}
 }
