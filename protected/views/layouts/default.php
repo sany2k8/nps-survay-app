@@ -48,9 +48,9 @@
         <div id="mws-logo-container">
 
             <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
-            <a href="<?php echo Yii::app()->getBaseUrl(true); ?>" id="mws-logo-wrap">
-                <?=CHtml::image(Yii::app()->request->baseUrl."/images/oz-logo.png", "OZ")?>
-            </a>
+            <!--<a href="<?php /*echo Yii::app()->getBaseUrl(true); */?>" id="mws-logo-wrap">
+                <?/*=CHtml::image(Yii::app()->request->baseUrl."/images/oz-logo.png", "OZ")*/?>
+            </a>-->
         </div>
 
         <?php if(!Yii::app()->user->isGuest): ?>
