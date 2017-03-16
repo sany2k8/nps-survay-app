@@ -57,7 +57,7 @@
                     <a href="javascript: void(0)" class="cursorPointer">
                         <table>
                             <tr>
-                                <td><i class="icol32-add"></i></td><td title="Create, Remove & Manage Survay's">Survay</td>
+                                <td><i class="icol32-add"></i></td><td title="Create, Remove & Manage Survay's">&nbsp;Survay</td>
                             </tr>
                         </table>
                     </a>
