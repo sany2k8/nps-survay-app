@@ -144,7 +144,7 @@
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'easy_to_avail',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->dropDownList($model,'easy_to_avail',Enum::getEnumeration(),array("class"=>"small")) ?>
+                        <?php echo $form->dropDownList($model,'easy_to_avail',Enum::yesNoNotSure(),array("class"=>"small")) ?>
                     </div>
                     <?php echo $form->error($model,'easy_to_avail'); ?>
                 </div>
