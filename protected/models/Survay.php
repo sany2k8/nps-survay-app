@@ -88,7 +88,7 @@ class Survay extends CActiveRecord
 			'date' => 'Date',
 			'time' => 'Time',
 			'msisdn' => 'MSISDN',
-			'user_id' => 'User',
+			'user_id' => 'User ID',
 			'product' => 'Product',
 			'assigned_to' => 'Assigned To',
 			'call_date' => 'Call Date',
