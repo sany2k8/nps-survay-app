@@ -14,8 +14,13 @@ This project contains configuration of "NPS Survay System". Net Promoter Score (
 
 ## How To Use:
 
-Add Survay: Store customer satisfaction research data.
-Manage Survay : Manage survay data with some basic CRUD (create, read, update & delete) functionality.
+# Survay
+**Add Survay:** Store customer satisfaction research data.
 
-Add User: Create new user who is going to manage this NPS system from backend.
-View User : Manage all the currently existing users of this NPS system.
+**Manage Survay:** Manage survay data with some basic CRUD (create, read, update & delete) functionality.
+
+# User
+
+**Add User:** Create new user who is going to manage this NPS system from backend.
+
+**View User:** Manage all the currently existing users of this NPS system.
