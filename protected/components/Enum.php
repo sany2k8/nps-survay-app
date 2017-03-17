@@ -175,11 +175,29 @@ class Enum
     /**
      * @return array
      */
-    public static function getScore()
+    public static function getScore($key='')
     {
-        $data = range(0,10);
-        return $data;
-        //return self::make_data_list($data);
+        $data = array();
+        $data[] = array('key'=>'0','value'=>'0');
+        $data[] = array('key'=>'1','value'=>'1');
+        $data[] = array('key'=>'2','value'=>'2');
+        $data[] = array('key'=>'3','value'=>'3');
+        $data[] = array('key'=>'4','value'=>'4');
+        $data[] = array('key'=>'5','value'=>'5');
+        $data[] = array('key'=>'6','value'=>'6');
+        $data[] = array('key'=>'7','value'=>'7');
+        $data[] = array('key'=>'8','value'=>'8');
+        $data[] = array('key'=>'9','value'=>'9');
+        $data[] = array('key'=>'10','value'=>'10');
+
+
+        if($key!=''){
+            $key = trim($key);
+            $value = array_column($data,'value','key');
+
+            return $value[$key];
+        }
+        return self::make_data_list($data);
     }
 
     /**

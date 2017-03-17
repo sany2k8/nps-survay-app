@@ -7,7 +7,7 @@
 
 <div class="form">
 	<div class="grid_10">
-		<h1><?php echo (($model->isNewRecord)?'New Survay':'Update Survay' . $model->id); ?></h1>
+		<h1><?php echo (($model->isNewRecord)?'Add Survay':'Update Survay #' . $model->id); ?></h1>
 
 		<div class="" style="height: auto">
 			<?php $form=$this->beginWidget('CActiveForm', array(
@@ -26,7 +26,7 @@
                 <div class="mws-form-row" style="display: none">
                     <?php echo $form->labelEx($model,'time',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->textField($model,'time',array("class"=>"medium-large required")); ?>
+                        <?php echo $form->textField($model,'time',array("class"=>"medium-large ")); ?>
                     </div>
                     <?php echo $form->error($model,'time'); ?>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'msisdn',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->textField($model,'msisdn',array("class"=>"medium-large required")); ?>
+                        <?php echo $form->textField($model,'msisdn',array("class"=>"medium-large ")); ?>
                     </div>
                     <?php echo $form->error($model,'msisdn'); ?>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'user_id',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->textField($model,'user_id',array("class"=>"medium-large required")); ?>
+                        <?php echo $form->textField($model,'user_id',array("class"=>"medium-large ")); ?>
                     </div>
                     <?php echo $form->error($model,'user_id'); ?>
                 </div>
@@ -60,7 +60,7 @@
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'assigned_to',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->textField($model,'assigned_to',array("class"=>"medium-large required")); ?>
+                        <?php echo $form->textField($model,'assigned_to',array("class"=>"medium-large")); ?>
                     </div>
                     <?php echo $form->error($model,'assigned_to'); ?>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="mws-form-row">
                     <?php echo $form->labelEx($model,'call_date',array("class"=>"mws-form-label")); ?>
                     <div class="mws-form-item">
-                        <?php echo $form->textField($model,'call_date',array("class"=>"medium-large required")); ?>
+                        <?php echo $form->textField($model,'call_date',array("class"=>"medium-large")); ?>
                     </div>
                     <?php echo $form->error($model,'call_date'); ?>
                 </div>

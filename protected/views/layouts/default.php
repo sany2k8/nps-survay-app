@@ -45,12 +45,12 @@
     <div id="mws-header" class="clearfix">
 
         <!-- Logo Container -->
-        <div id="mws-logo-container">
+        <div id="mws-logo-container" style="width: 174px;">
 
             <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
-            <!--<a href="<?php /*echo Yii::app()->getBaseUrl(true); */?>" id="mws-logo-wrap">
-                <?/*=CHtml::image(Yii::app()->request->baseUrl."/images/oz-logo.png", "OZ")*/?>
-            </a>-->
+            <a href="<?php echo Yii::app()->getBaseUrl(true); ?>" id="mws-logo-wrap" >
+                <div style="font-size: 32px;">NPS Admin</div>
+            </a>
         </div>
 
         <?php if(!Yii::app()->user->isGuest): ?>

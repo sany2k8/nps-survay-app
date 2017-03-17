@@ -6,7 +6,7 @@
 ?>
 <div class="mws-panel grid_12">
     <?php if(isset($model->id)){?>
-        <h1>Update <?php echo 'User' ?> <?php echo $model->id; ?></h1>
+        <h1>Update <?php echo 'User #' ?> <?php echo $model->id; ?></h1>
     <?php }else{?>
         <h1>Create <?php echo 'User' ?></h1>
     <?php } ?>

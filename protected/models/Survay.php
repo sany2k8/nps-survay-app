@@ -254,5 +254,13 @@ class Survay extends CActiveRecord
 		return isset($model->call_status) ? Enum::getCallStatus($model->call_status) :'';
 	}
 
+    /**
+	 * @param $model
+	 * @return array|mixed|string
+	 */
+	public function getScore($model)
+	{
+		return isset($model->score) ? Enum::getScore($model->score) :'';
+	}
 
 }

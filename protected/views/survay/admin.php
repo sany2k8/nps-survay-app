@@ -20,7 +20,7 @@
 	'columns'=>array(
 		//'id',
 		//'date',
-		GenericProperties::getDatePickerForGrid($model,'date'),
+		//GenericProperties::getDatePickerForGrid($model,'date'),
 		'time',
 		'msisdn',
 		'user_id',
@@ -36,8 +36,9 @@
 		//'knowledge',
 		array('name'=>'knowledge','filter'=>Enum::getEnumeration(),'value'=>array($model,'getEnumeration')),
 		//'heard_abt_tonic',
-		array('name'=>'heard_abt_tonic','filter'=>Enum::getHeardType(),'value'=>array($model,'getHeardType')),
-		'score',
+		
+		//'score',
+		array('name'=>'score','filter'=>Enum::getScore(),'value'=>array($model,'getScore')),
 		/*
 		'behavior',
 		'waiting_time',

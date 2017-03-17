@@ -12,7 +12,7 @@ require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'../config/UrlManager.php';
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'NPS - The Platform',
+	'name'=>'NPS - The Survay Platform',
 
     'defaultController' => 'survay',
     #timezone
@@ -37,7 +37,8 @@ return array(
 			'password'=>'g',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			//'ipFilters'=>array('172.17.0.1','::1'),
-			'ipFilters'=>array('127.0.0.1','::1', '172.17.0.1','172.17.0.2'),
+			 'ipFilters'=>array('127.0.0.1','::1', '172.17.0.1','172.17.0.2'),
+			//'ipFilters'=>array('172.17.0.1','172.17.0.2','::1'),
 		),
 
 	),
