@@ -19,7 +19,7 @@ If you want to build from `Dockerfile` then try this way,
 
 `$ docker build -t sany2k8/nps-survay-app .`
 
-`$ docker run -d sany2k8/nps-survay-app`
+`$ docker run -d -p 80:80 sany2k8/nps-survay-app`
 
 
 
