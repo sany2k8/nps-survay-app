@@ -13,6 +13,16 @@ This project contains configuration of "NPS Survay System". Net Promoter Score (
 7.  Check the container IP using, `docker inspect --format '{{ .NetworkSettings.IPAddress }}' nps-survay-app`
 8.  Browser URL like,  http://your.container.ip:80 e.g: http://172.17.0.2:80
 
+## Using Build:
+
+If you want to build from `Dockerfile` then try this way, 
+
+`$ docker build -t sany2k8/nps-survay-app .`
+
+`$ docker run -d sany2k8/nps-survay-app`
+
+
+
 **N.B** :  The best practice for docker container running is to use **ENV** variables e.g `docker run -d --name nps-survay-app -e DB_HOST='54.255.176.74' -e DB_PORT='5432' -p 80:80 -v $(pwd):/var/www/html sany2k8/nps-survay-php7-apache`
 
 
